@@ -4,9 +4,13 @@ import { Button, Image, StyleSheet, Text,TextInput,View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';  //Evitar el notch de las pantallas 
 import  {LoginButton, RegisterButton}  from '../components';
 import tw from 'tailwind-react-native-classnames';
+import { useNavigation } from '@react-navigation/native';
 
 
 export const HomeScreen = () => {
+
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={tw`bg-gray-300 h-full`}>
       <View style={{ 

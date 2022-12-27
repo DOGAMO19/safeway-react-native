@@ -1,9 +1,14 @@
+import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 
 export const LoginButton = ({textButton}) => {
+
+    const navigation = useNavigation();
+
   return (
     <TouchableOpacity
+    onPress={() => navigation.navigate('LoginScreen')} 
     style = {{
         ...styles.button,
         backgroundColor: '#273746'
@@ -21,8 +26,12 @@ export const LoginButton = ({textButton}) => {
   )
 }
 export const RegisterButton = ({textButton}) => {
+
+    const navigation = useNavigation();
+
   return (
     <TouchableOpacity
+    onPress={() => navigation.navigate('RegisterScreen')} 
     style = {{
         ...styles.button,
         backgroundColor: '#F4F6F7',
@@ -43,8 +52,12 @@ export const RegisterButton = ({textButton}) => {
 }
 
 export const LogearButton = ({textButton}) => {
+
+    const navigation = useNavigation();
+
     return (
         <TouchableOpacity
+        onPress={() => navigation.navigate('NavScreen')} 
         style = {{
             ...styles.button,
             backgroundColor: '#1C2833',
