@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';  //Evitar el notc
 import  {LoginButton, RegisterButton}  from '../components';
 import tw from 'tailwind-react-native-classnames';
 import { useNavigation } from '@react-navigation/native';
+import { Localitation } from '../components/Localitation';
 
 
 export const HomeScreen = () => {
@@ -31,6 +32,7 @@ export const HomeScreen = () => {
            require("../assets/SafewayLogo.png")
           }
         />
+        <Localitation />
         <LoginButton textButton= "Iniciar Sesion" />
         <RegisterButton textButton= "Registrate" />
       </View> 

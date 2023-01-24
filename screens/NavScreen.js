@@ -2,9 +2,13 @@
 import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Icon } from '@rneui/themed';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
 import tw from 'tailwind-react-native-classnames';
 import { useNavigation } from '@react-navigation/native';
+
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete'; 
+import { REACT_APP_GOOGLE_MAPS_APIKEY } from "@env";
+import { useDispatch } from 'react-redux';
+import { setDestino, setOrigen } from '../slices/navSlice';
 
 const data = [
     {
@@ -50,7 +54,6 @@ const { width } = Dimensions.get('window'); //Obtiene todo el valor del tamanio 
 export const NavScreen = () => {
 
     const navigation = useNavigation();
-
     
     return (
       <SafeAreaView style={tw `bg-gray-100 h-full`}>
